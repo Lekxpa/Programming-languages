@@ -18,4 +18,4 @@ int num1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Напишите число B: ");
 int num2 = int.Parse(Console.ReadLine());
 
-Console.WriteLine(result);
+Console.WriteLine(num1);

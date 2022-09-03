@@ -3,7 +3,7 @@
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
-int GetNums(int num1, int num2)
+int GNums(int num1, int num2)
 {
     int result = 1;
     for (int i = 1; i <= num2; i++)
@@ -14,8 +14,8 @@ int GetNums(int num1, int num2)
 }
 
 Console.WriteLine("Напишите число А: ");
-int num1 = int.Parse(Console.ReadLine());
+int number1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Напишите число B: ");
-int num2 = int.Parse(Console.ReadLine());
+int number2 = int.Parse(Console.ReadLine());
 
-Console.WriteLine(num1);
+Console.WriteLine($"{GNums(number1, number2)}");

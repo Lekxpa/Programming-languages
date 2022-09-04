@@ -10,7 +10,7 @@ int[] IArray(int num, int begl, int endl)
 
     for(int i=0; i < num; i++)
     {
-        arr[i] = new Random().Next(begl, endl +1);
+        arr[i] = new Random().Next(begl, endl); //тк в условиях b) +1 не делаю
     }
     return arr;
 }

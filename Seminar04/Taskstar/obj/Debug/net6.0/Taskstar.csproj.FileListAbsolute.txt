@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\bin\Debug\net6.0\Taskstar.exe
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\bin\Debug\net6.0\Taskstar.deps.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\bin\Debug\net6.0\Taskstar.runtimeconfig.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\bin\Debug\net6.0\Taskstar.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\bin\Debug\net6.0\Taskstar.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\refint\Taskstar.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\Taskstar.genruntimeconfig.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar04\Taskstar\obj\Debug\net6.0\ref\Taskstar.dll

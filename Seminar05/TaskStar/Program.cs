@@ -13,7 +13,7 @@ int[] MonArray(int size, int min, int max)
     return res;
 }
 
-void BubbleSort(int[] array)
+void SortBall(int[] array)
 {
     int temp = array[0];
     for (int i = 0; i < array.Length; i++)
@@ -30,20 +30,7 @@ void BubbleSort(int[] array)
    }
 }
 
-void SortMass(int[] array)
-{
-    for (int j = 0; j < array.Length; j++)
-    {
-        if (array[j] < array[j + 1])
-        {
-            int tmp = array[j];
-            array[j] = array[j+1];
-            array[j+1] = tmp;
-        }
-    }
-}
-
-void PrintSortMass(int[] array)
+void PrintSortBall(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -60,5 +47,5 @@ int endline = int.Parse(Console.ReadLine());
 
 int[] EvenArray = MonArray(number, beginline, endline);
 Console.WriteLine(String.Join(" ", EvenArray));
-BubbleSort(EvenArray);
-PrintSortMass(EvenArray);
+SortBall(EvenArray);
+PrintSortBall(EvenArray);

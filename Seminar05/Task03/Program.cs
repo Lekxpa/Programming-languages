@@ -3,7 +3,6 @@
 // [3 7 22 2 78] -> 76
 
 
-
 int[] MonArray(int size, int min, int max)
 {
     int[] res = new int[size];
@@ -16,31 +15,27 @@ int[] MonArray(int size, int min, int max)
 
 void MinNumbers(int[] array)
 {
-    int min = 0;
+    int mn =  array[0];
     for (int i = 0; i < array.Length; i++)
-   
     {
-        if (array[i] < min) min = array[i];
+        if (array[i] < mn) mn = array[i];
     }
-  Console.WriteLine($"{min}");
- //return min;
+  Console.WriteLine($"Минимальное значение: {mn}");
 }
 
 void MaxNumbers(int[] array)
 {
-    int max = 0;
+    int mx =  array[0];
     for (int i = 0; i < array.Length; i++)
- 
     {
-        if (array[i] > max) max = array[i];
+        if (array[i] > mx) mx = array[i];
     }
-  Console.WriteLine($"{max}");
-//return max;
+    //return mx;
+  Console.WriteLine($"Максимальное значение: {mx}");
 }
 
-//int result = max - min;
-//Console.WriteLine($"{result}");
-
+//int result = MaxNumbers - MinNumbers;
+//Console.WriteLine(result);
 
 Console.Write("Введите количество элементов в массиве: ");
 int number = int.Parse(Console.ReadLine());
@@ -53,4 +48,8 @@ int[] EvenArray = MonArray(number, beginline, endline);
 Console.WriteLine(String.Join(" ", EvenArray));
 MinNumbers(EvenArray);
 MaxNumbers(EvenArray);
-//int[] result = MaxNumbers(EvenArray) - MinNumbers(EvenArray);
+
+//int res1 = MinNumbers(EvenArray);
+
+//int result = mx - mn;
+//Console.WriteLine(res1);

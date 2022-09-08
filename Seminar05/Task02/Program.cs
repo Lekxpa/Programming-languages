@@ -4,21 +4,21 @@
 //[-4, -6, 89, 6] -> 0
 
 
-double[] MonArray(double size, double min, double max)
+int[] MonArray(int size, int min, int max)
 {
-    double[] res = new double[size];
-    for (double i =0; i < size; i++)
+    int[] res = new int[size];
+    for (int i =0; i < size; i++)
         {
             res[i] = new Random().Next(min, max +1);
         }
     return res;
 }
 
-void ENNumbers(double[] array)
+void ENNumbers(int[] array)
 {
-    double res = 0;
+    int res = 0;
 
-    for (double i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if (i % 2 != 0) res = res + array[i];
     }
@@ -26,17 +26,13 @@ void ENNumbers(double[] array)
 }
 
 Console.Write("Введите количество элементов в массиве: ");
-double number = double.Parse(Console.ReadLine());
-//double number = Convert.ToInt32(Console.ReadLine());
+int number = int.Parse(Console.ReadLine());
 Console.Write("Введите значение начала интервала: ");
-double beginline = double.Parse(Console.ReadLine());
-//double beginline = Convert.ToInt32(Console.ReadLine());
+int beginline = int.Parse(Console.ReadLine());
 Console.Write("Введите значение окончания интервала: ");
-double endline = double.Parse(Console.ReadLine());
-//double endline = Convert.ToInt32(Console.ReadLine());
+int endline = int.Parse(Console.ReadLine());
 
-//Convert.ToInt32
 
-double[] EvenArray = MonArray(number, beginline, endline);
+int[] EvenArray = MonArray(number, beginline, endline);
 Console.WriteLine(String.Join(" ", EvenArray));
 ENNumbers(EvenArray);

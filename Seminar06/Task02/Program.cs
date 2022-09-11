@@ -29,13 +29,19 @@ void PrintArray(int[,] array)
     }
 }
 
-int[,] PointOfIntersection (int[,] Array)
+void PointOfIntersection (int[,] Array)
 {
-    int x = (Array[0,0] - Array[1,0]) /(Array[1,1] - Array[0,1]);
-    int y = Array[0,1] * x + Array[0,0];
-    int[,] result = new int[x,y];
-    Console.Write($"{x:F1}, {y:F1}");
-    return result;
+    if(Array[0,0] * Array[1,1] - Array[1,0] * Array[0,1] == 0)
+    {
+        Console.WriteLine("Прямые параллельны");
+    }
+    else
+    {
+        int x = (Array[0,0] - Array[1,0]) /(Array[1,1] - Array[0,1]);
+        int y = Array[0,1] * x + Array[0,0];
+        int[,] result = new int[x,y];
+        Console.Write($"Точка пересечения: {x:F1}, {y:F1}");
+    }
 }
 
 Console.Write("Введите минимальное значение: ");

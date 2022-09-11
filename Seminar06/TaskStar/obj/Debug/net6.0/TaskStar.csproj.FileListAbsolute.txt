@@ -1,0 +1,5 @@
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar06\TaskStar\obj\Debug\net6.0\TaskStar.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar06\TaskStar\obj\Debug\net6.0\TaskStar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar06\TaskStar\obj\Debug\net6.0\TaskStar.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar06\TaskStar\obj\Debug\net6.0\TaskStar.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar06\TaskStar\obj\Debug\net6.0\TaskStar.csproj.CoreCompileInputs.cache

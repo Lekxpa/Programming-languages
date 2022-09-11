@@ -19,51 +19,31 @@ int[,] MyArray(int m, int n, int min, int max)
 
 void PrintArray(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int rows = 0; rows < array.GetLength(0); rows++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int cols = 0; cols < array.GetLength(1); cols++)
         {
-            Console.Write($"{array[i,j]} ");
+            Console.Write($"{array[rows,cols]}\t ");
         }
+        Console.WriteLine();
     }
 }
 
-
-void PointOfIntersection (int[,] array)
+int[,] PointOfIntersection (int[,] Array)
 {
-//FirstLine SecondLine
-    
-    int x = (n2 - n1) / (m1 - m2);
-
-    int y = m1 * (n2 - n1) / (m1 - m2) + n1;
-    Console.Write($"{x}, {y}");
+    int x = (Array[0,0] - Array[1,0]) /(Array[1,1] - Array[0,1]);
+    int y = Array[0,1] * x + Array[0,0];
+    int[,] result = new int[x,y];
+    Console.Write($"{x:F1}, {y:F1}");
+    return result;
 }
 
-Console.Write("Введите количество строк: ");
-int m = int.Parse(Console.ReadLine());
-
-Console.Write("Введите количество столбцов: ");
-int n = int.Parse(Console.ReadLine());
-
 Console.Write("Введите минимальное значение: ");
-int min = int.Parse(Console.ReadLine());
-
+int minEl = int.Parse(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
-int max = int.Parse(Console.ReadLine());
+int maxEl = int.Parse(Console.ReadLine());
 
-//Console.Write("Введите первое значение - k1: ");
-//int k1 = int.Parse(Console.ReadLine());
-//Console.Write("Введите второе значение - b1: ");
-//int b1 = int.Parse(Console.ReadLine());
-//Console.Write("Введите третье значение - k2: ");
-//int k2 = int.Parse(Console.ReadLine());
-//Console.Write("Введите четвертое значение - b2: ");
-//int b2 = int.Parse(Console.ReadLine());
-
-//int[,] EvenArray = PointOfIntersection[,];
-//Console.WriteLine(String.Join(" ", EvenArray));
-//CrossLine(EvenArray);
-
-int[,] MonArray = MyArray(m, n, min, max);
+int[,] MonArray = MyArray(2, 2, minEl, maxEl);
 PrintArray(MonArray);
 PointOfIntersection(MonArray);
+Console.WriteLine();

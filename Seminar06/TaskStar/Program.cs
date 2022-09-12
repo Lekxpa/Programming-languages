@@ -29,37 +29,25 @@ void PrintArray(int[,] array)
     }
 }
 
-int FillImage (int[,] Fillarray)
+void FillImage (int[,] Fillarray)
+
 {
-    int step = Fillarray[Fillarray.GetLength(0),0];
+    int step = Fillarray[Fillarray.GetLength(0),0]; 
     for (int row = Fillarray.GetLength(0); row < Fillarray.GetLength(0); row--)
     {
         for (int col = 0; col < Fillarray.GetLength(1); col++)
         {
-            if (step == 0)
-            {
-                step = 1;
-                step = Fillarray[row - 1, col];
-            }
-            if (step == 0)
-            {
-                step = 1;
-                step = Fillarray[row, col-1];
-            }
-                if (step == 0)
-            {
-                step = 1;
-                step = Fillarray[row + 1, col];
-            }
-            if (step == 0)
-            {
-                step = 1;
-                step = Fillarray[row, col + 1];
-            }
-            Console.Write($"{Fillarray[row,col]} ");
+            Console.Write($"{step} ");
+            step = Fillarray[row - 1, col];
+            Console.Write($"{step} ");
+            step = Fillarray[row, col-1];
+            Console.Write($"{step} ");
+            step = Fillarray[row + 1, col];
+            Console.Write($"{step} ");
+            step = Fillarray[row, col + 1];
+            Console.Write($"{step} ");
         }
     }
-    return step;
 }
 
 Console.Write("Введите количество строк: ");

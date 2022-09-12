@@ -4,9 +4,9 @@
 //задаются пользователем.
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-int[,] MyArray(int m, int n, int min, int max)
+double[,] MyArray(int m, int n, int min, int max)
 {
-    int[,] result = new int[m,n];
+    double[,] result = new double[m,n];
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -17,7 +17,7 @@ int[,] MyArray(int m, int n, int min, int max)
     return result;
 }
 
-void PrintArray(int[,] array)
+void PrintArray(double[,] array)
 {
     for (int rows = 0; rows < array.GetLength(0); rows++)
     {
@@ -29,13 +29,12 @@ void PrintArray(int[,] array)
     }
 }
 
-void PointOfIntersection (int[,] Array)
+void PointOfIntersection (double[,] Array)
 {
     if (Array[0, 0] != Array[1, 0] && Array[0, 1] != Array[1, 1])
     {
-        int x = (Array[0, 0] - Array[1, 0]) / (Array[1, 1] - Array[0, 1]);
-        int y = Array[0, 1] * x + Array[0, 0];
-        int[,] result = new int[x, y];
+        double x = (Array[1, 0] - Array[0, 0]) / (Array[0, 1] - Array[1, 1]);
+        double y = Array[0, 1] * x + Array[0, 0];
         Console.Write($"Точка пересечения: {x:F1}, {y:F1}");
     }
     else
@@ -49,7 +48,6 @@ int minEl = int.Parse(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
 int maxEl = int.Parse(Console.ReadLine());
 
-int[,] MonArray = MyArray(2, 2, minEl, maxEl);
+double[,] MonArray = MyArray(2, 2, minEl, maxEl);
 PrintArray(MonArray);
 PointOfIntersection(MonArray);
-Console.WriteLine();

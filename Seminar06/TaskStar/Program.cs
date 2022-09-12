@@ -11,7 +11,7 @@ int[,] MyArray(int m, int n, int min, int max)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i,j] = new Random().Next(0, 2);
+            result[i,j] = new Random().Next(min, max + 1);
         }
     }
     return result;
@@ -62,24 +62,16 @@ int FillImage (int[,] Fillarray)
     return step;
 }
 
-//void FillImage (int row, int col)
-//{
-   // if(MyArray[row, col] = 0)
-    //{
-     //   MyArray[row, col] = 1;
-      //  FillImage(row-1, col); // шаг влево
-      //  FillImage(row, col-1); // шаг вниз
-       // FillImage(row+1, col); // шаг вправо
-       // FillImage(row, col+1); // шаг вверх
-   // }
-//}
-
 Console.Write("Введите количество строк: ");
 int numrows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
 int numcols = int.Parse(Console.ReadLine());
+Console.Write("Введите минимальное значение элемента: ");
+int minEl = int.Parse(Console.ReadLine());
+Console.Write("Введите максимальное значение элемента: ");
+int maxEl = int.Parse(Console.ReadLine());
 
-int[,] MonArray = MyArray(numrows, numcols, 0, 2);
+int[,] MonArray = MyArray(numrows, numcols, minEl, maxEl);
 PrintArray(MonArray);
 FillImage(MonArray);
 Console.WriteLine();

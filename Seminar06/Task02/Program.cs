@@ -31,16 +31,16 @@ void PrintArray(int[,] array)
 
 void PointOfIntersection (int[,] Array)
 {
-    if(Array[0,0] * Array[1,1] - Array[1,0] * Array[0,1] == 0)
+    if (Array[0, 0] != Array[1, 0] && Array[0, 1] != Array[1, 1])
     {
-        Console.WriteLine("Прямые параллельны");
+        int x = (Array[0, 0] - Array[1, 0]) / (Array[1, 1] - Array[0, 1]);
+        int y = Array[0, 1] * x + Array[0, 0];
+        int[,] result = new int[x, y];
+        Console.Write($"Точка пересечения: {x:F1}, {y:F1}");
     }
     else
     {
-        int x = (Array[0,0] - Array[1,0]) /(Array[1,1] - Array[0,1]);
-        int y = Array[0,1] * x + Array[0,0];
-        int[,] result = new int[x,y];
-        Console.Write($"Точка пересечения: {x:F1}, {y:F1}");
+        Console.WriteLine("Прямые параллельны");
     }
 }
 

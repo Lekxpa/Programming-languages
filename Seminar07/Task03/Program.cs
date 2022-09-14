@@ -40,8 +40,8 @@ void ArithmeticAverage (double[,] Array)
         {
             result = result + Array[i, j];
         }
-        result = result / Array.GetLength(1);
-        Console.Write($"{result:F2}  ");
+        result = result / Array.GetLength(0);
+        Console.Write($"{result:F2}    ");
     }
 }
 

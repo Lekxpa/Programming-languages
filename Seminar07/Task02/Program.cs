@@ -33,34 +33,27 @@ void PrintArray(int[,] array)
     }
 }
 
-int[,] SearchNumber(int[,] Array)
+void SearchNumber(int[,] Array)
 {
     Console.Write("Введите число: ");
     int num = int.Parse(Console.ReadLine());
     {
         for (int i = 0; i < Array.GetLength(0); i++)
         {
-            for (int j = 0; j < Array.GetLength(0); j++)
+            for (int j = 0; j < Array.GetLength(1); j++)
             {
-                if(num = Array[i,j])
-                {
+                if(num == Array[i,j])
+                {  
                     Console.WriteLine($"Индексы заданного числа: ({i}, {j}) ");
-                    //Console.WriteLine("Такого числа в массиве нет");
+                    return;
+                    break;
                 }
-                else
-                {
-                    Console.WriteLine("Такого числа в массиве нет");
-                    //Console.WriteLine($"Индексы заданного числа: ({i}, {j}) ");
-                }
-             }
-             //if (num != Array[i,j]) Console.WriteLine("Такого числа в массиве нет");
+             } 
         }
-         //Console.WriteLine("Такого числа в массиве нет");
-        //else Console.WriteLine("Такого числа в массиве нет");
     }
-    return num;
+    Console.WriteLine("Такого числа в массиве нет"); 
 }
-
+    
 Console.Write("Введите количество строк в массиве: ");
 int lines = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов в массиве: ");

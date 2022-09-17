@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\bin\Debug\net6.0\task01.exe
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\bin\Debug\net6.0\task01.deps.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\bin\Debug\net6.0\task01.runtimeconfig.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\bin\Debug\net6.0\task01.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\bin\Debug\net6.0\task01.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\refint\task01.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\task01.genruntimeconfig.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Seminar8\task01\obj\Debug\net6.0\ref\task01.dll

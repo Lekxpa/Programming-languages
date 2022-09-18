@@ -9,40 +9,72 @@
 //Console.Clear();
 //Console.WriteLine($"Задача 62: Заполните спирально массив 4 на 4.");
 
-int n = 4;
-int[,] sqareMatrix = new int[n, n];
-
-int temp = 1;
-int i = 0;
-int j = 0;
-
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+//void SpiralArray (int[,] array)
+int[,] SpiralArray(int[,] array)
 {
-  sqareMatrix[i, j] = temp;
-  temp++;
-  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
-    j--;
-  else
-    i--;
-}
+    //Console.Write("Введите количество строк и столбцов в массиве: ");
+    //int numLineAndCols = int.Parse(Console.ReadLine());
+    //int[,] MyArray = new int[int m, int n, int min, int max];
 
-WriteArray(sqareMatrix);
 
-void WriteArray (int[,] array)
-{
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    int temp = 1;
+    int i = 0;
+    int j = 0;
+
+    while (temp <= array.GetLength(0) * array.GetLength(1))
     {
-      if (array[i,j] / 10 <= 0)
-      Console.Write($" {array[i,j]} ");
-
-      else Console.Write($"{array[i,j]} ");
+        array[i, j] = temp;
+        temp++;
+        if (i <= j + 1 && i + j < array.GetLength(1) - 1)
+        j++;
+        else if (i < j && i + j >= array.GetLength(0) - 1)
+        i++;
+        else if (i >= j && i + j > array.GetLength(1) - 1)
+        j--;
+        else
+        i--;
     }
-    Console.WriteLine();
-  }
+    return array; //MyArray;
 }
+
+//WriteArray(sqareMatrix);
+
+//void WriteArray (int[,] array)
+//{
+//  for (int i = 0; i < array.GetLength(0); i++)
+//  {
+//    for (int j = 0; j < array.GetLength(1); j++)
+ //   {
+ //     if (array[i,j]  < 10)
+ //     Console.Write($" {array[i,j]}  ");
+
+  //    else Console.Write($"{array[i,j]}  ");
+  //  }
+  //  Console.WriteLine();
+ // }
+//}
+
+void PrintArray(int[,] array)
+{
+    for (int rows = 0; rows < array.GetLength(0); rows++)
+    {
+        for (int cols = 0; cols < array.GetLength(1); cols++)
+        {
+            if (array[rows,cols]  < 10)
+            Console.Write($" {array[rows,cols]}  ");
+            else Console.Write($"{array[rows,cols]}  ");
+        }
+    }
+}
+
+
+  Console.Write("Введите количество строк и столбцов в массиве: ");
+    int numLineAndCols = int.Parse(Console.ReadLine());
+    int numbers = numLineAndCols * numLineAndCols;
+    int[,] MyArray = SpiralArray(numLineAndCols, numLineAndCols, 1, numbers);
+//Console.Write("Введите количество строк и столбцов в массиве: ");
+//int numLineAndCols = int.Parse(Console.ReadLine());
+
+int[,] MonArray = SpiralArray(4, 4, 1, 16);
+PrintArray(MyArray);
+//OrderOfElementsOfArray(MonArray);

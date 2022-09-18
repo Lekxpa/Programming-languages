@@ -8,74 +8,82 @@
 //27(0,0,1) 90(0,1,1)
 //26(1,0,1) 55(1,1,1)
 
-Console.Clear();
-Console.WriteLine($"Задача 60: Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.");
-Console.WriteLine($"\nВведите размер массива X x Y x Z:");
-int x = InputNumbers("Введите X: ");
-int y = InputNumbers("Введите Y: ");
-int z = InputNumbers("Введите Z: ");
-Console.WriteLine($"");
-
-int[,,] array3D = new int[x, y, z];
-CreateArray(array3D);
-WriteArray(array3D);
-
-int InputNumbers(string input)
+int[,,] MyArray(int x, int y, int z, int min, int max)
 {
-  Console.Write(input);
-  int output = Convert.ToInt32(Console.ReadLine());
-  return output;
-}
-
-void WriteArray (int[,,] array3D)
-{
-  for (int i = 0; i < array3D.GetLength(0); i++)
-  {
-    for (int j = 0; j < array3D.GetLength(1); j++)
+    int[,,] result = new int[x,y,z];
+    for (int i = 0; i < x; i++)
     {
-      Console.Write($"X({i}) Y({j}) ");
-      for (int k = 0; k < array3D.GetLength(2); k++)
-      {
-        Console.Write( $"Z({k})={array3D[i,j,k]}; ");
-      }
-      Console.WriteLine();
-    }
-    Console.WriteLine();
-  }
-}
-
-void CreateArray(int[,,] array3D)
-{
-  int[] temp = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
-  int  number;
-  for (int i = 0; i < temp.GetLength(0); i++)
-  {
-    temp[i] = new Random().Next(10, 100);
-    number = temp[i];
-    if (i >= 1)
-    {
-      for (int j = 0; j < i; j++)
-      {
-        while (temp[i] == temp[j])
+        for (int j = 0; j < y; j++)
         {
-          temp[i] = new Random().Next(10, 100);
-          j = 0;
-          number = temp[i];
+            for (int k = 0; k < z; k++)
+            {
+                result[i,j,k] = new Random().Next(min, max + 1);
+            }
         }
-          number = temp[i];
-      }
     }
-  }
-  int count = 0; 
-  for (int x = 0; x < array3D.GetLength(0); x++)
-  {
-    for (int y = 0; y < array3D.GetLength(1); y++)
-    {
-      for (int z = 0; z < array3D.GetLength(2); z++)
-      {
-        array3D[x, y, z] = temp[count];
-        count++;
-      }
-    }
-  }
+    return result;
 }
+
+void PrintArray (int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i,j,k]} ");
+                Console.Write($"({i}, {j}, {k})\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+void FillArray(int[,,] Array)
+{
+    int[] temp = new int[Array.GetLength(0) * Array.GetLength(1) * Array.GetLength(2)];
+    int number = 0;
+    int count = 0; 
+    for (int i = 0; i < temp.Length; i++)
+    {
+        temp[i] = new Random().Next(0, 10);
+        number = temp[i];
+        if (i >= 1)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                while (temp[i] == temp[j])
+                {
+                    temp[i] = new Random().Next(0, 10);
+                    j = 0;
+                    number = temp[i];
+                }
+                number = temp[i];
+            }
+        }
+    }
+    for (int x = 0; x < Array.GetLength(0); x++)
+    {
+        for (int y = 0; y < Array.GetLength(1); y++)
+        {
+            for (int z = 0; z < Array.GetLength(2); z++)
+            {
+                Array[x, y, z] = temp[count];
+                count++;
+            }
+        }
+    }
+}
+
+Console.WriteLine("Введите размер массива: ");
+Console.Write("Введите k: ");
+int k = int.Parse(Console.ReadLine());
+Console.Write("Введите m: ");
+int m = int.Parse(Console.ReadLine());
+Console.Write("Введите n: ");
+int n = int.Parse(Console.ReadLine());
+
+int[,,] MonArray = MyArray(k, m, n, 0, 10);
+PrintArray(MonArray);
+FillArray(MonArray);

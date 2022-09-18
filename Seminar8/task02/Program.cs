@@ -35,9 +35,9 @@ void PrintArray(int[,] array)
 
 void SumOfElemOfRow (int[,] Array)
 {
-    int minSumLine = 0;
-    int[,] res = new int[Array.GetLength(0),Array.GetLength(1)];
-    int sumLine = res[0, 0];
+    int minSumRow = 0;
+    int[] res = new int[Array.GetLength(0)];
+    int SumRow = 0;
     for (int i = 0; i < Array.GetLength(0); i++)
     {
     //    int res = 0;
@@ -48,14 +48,15 @@ void SumOfElemOfRow (int[,] Array)
 
         for (int j = 0; j < Array.GetLength(1); j++)
         {
-        int tempSumLine = res[0, j];
-         if (sumLine > tempSumLine)
+        int tempSumRow = 0;
+         if (SumRow > tempSumRow)
         {
-            sumLine = tempSumLine;
-            minSumLine = i;
+            SumRow = tempSumRow;
+            minSumRow = i;
         }
-            Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
+            Console.WriteLine($"\n{minSumRow+1} - строкa с наименьшей суммой ({SumRow}) элементов ");
     }
+    res[i] = minSumRow;
        // {
        //     res = res + Array[i, j];
                  //if (temp > res) temp = res;  
@@ -65,8 +66,9 @@ void SumOfElemOfRow (int[,] Array)
 
     //}
      
-      //Console.Write("Введите {0}-й элемент: " ,  i + 1);
-      
+      Console.Write($"{res[i]} ");
+    }   
+    return;
 }
 
 //void SumOfElemOfRow (int[,] Array)
@@ -88,14 +90,17 @@ void SumOfElemOfRow (int[,] Array)
 //Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
 //}
 
-int[,] SumLineElements(int[,] array, int i)
+void SumLineElements(int[,] array)
 {
-  int sumLine = array[i,0];
-  for (int j = 1; j < array.GetLength(1); j++)
-  {
-    sumLine += array[i,j];
-  }
-  return sumLine;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        int SumRow = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            SumRow += array[i,j];
+        }
+        Console.WriteLine($"Сумма элементов строки: {SumRow}");
+    }
 }
 
 Console.Write("Введите количество строк в массиве: ");
@@ -110,5 +115,5 @@ int endline = int.Parse(Console.ReadLine());
 
 int[,] MonArray = MyArray(lines, columns, beginline, endline);
 PrintArray(MonArray);
-SumOfElemOfRow(MonArray);
 SumLineElements(MonArray);
+SumOfElemOfRow(MonArray);

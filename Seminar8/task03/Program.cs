@@ -8,72 +8,88 @@
 //15 18
 
 
-Console.Clear();
-Console.WriteLine($"Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.\n\nСразу зададим матрицу, которую можно перемножить, т.е. количество столбцов первой равно количеству строк второй");
-Console.WriteLine($"\nВведите размеры матриц и диапазон случайных значений:");
-int m = InputNumbers("Введите число строк 1-й матрицы: ");
-int n = InputNumbers("Введите число столбцов 1-й матрицы (и строк 2-й): ");
-int p = InputNumbers("Введите число столбцов 2-й матрицы: ");
-int range = InputNumbers("Введите диапазон случайных чисел: от 1 до ");
 
-int[,] firstMartrix = new int[m, n];
-CreateArray(firstMartrix);
-Console.WriteLine($"\nПервая матрица:");
-WriteArray(firstMartrix);
 
-int[,] secomdMartrix = new int[n, p];
-CreateArray(secomdMartrix);
-Console.WriteLine($"\nВторая матрица:");
-WriteArray(secomdMartrix);
-
-int[,] resultMatrix = new int[m,p];
-
-MultiplyMatrix(firstMartrix, secomdMartrix, resultMatrix);
-Console.WriteLine($"\nПроизведение первой и второй матриц:");
-WriteArray(resultMatrix);
-
-void MultiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix, int[,] resultMatrix)
+int[,] MyArray(int m, int n, int min, int max)
 {
-  for (int i = 0; i < resultMatrix.GetLength(0); i++)
-  {
-    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    int[,] result = new int[m,n];
+    //if (m != n) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
+    //else
+    //{
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                result[i,j] = new Random().Next(min, max + 1);
+            }
+        }
+    //}
+    return result;
+}
+
+void PrintArray(int[,] array)
+{
+    for (int rows = 0; rows < array.GetLength(0); rows++)
     {
-      int sum = 0;
-      for (int k = 0; k < firstMartrix.GetLength(1); k++)
-      {
-        sum += firstMartrix[i,k] * secomdMartrix[k,j];
-      }
-      resultMatrix[i,j] = sum;
+        for (int cols = 0; cols < array.GetLength(1); cols++)
+        {
+            Console.Write($"{array[rows,cols]}\t ");
+        }
+        Console.WriteLine();
     }
-  }
 }
 
-int InputNumbers(string input)
-{
-  Console.Write(input);
-  int output = Convert.ToInt32(Console.ReadLine());
-  return output;
-}
 
-void CreateArray(int[,] array)
+void MultiplyMatrix(int[,] FirstMartrix, int[,] SecomdMartrix, int[,] ResM)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    if (FirstMartrix != SecomdMartrix) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
+    else
     {
-      array[i, j] = new Random().Next(range);
+        for (int i = 0; i < ResM.GetLength(0); i++)
+        {
+            for (int j = 0; j < ResM.GetLength(1); j++)
+            {
+            
+            //else
+            //{
+                int sum = 0;
+                for (int k = 0; k < FirstMartrix.GetLength(1); k++)
+                {
+                    sum += FirstMartrix[i,k] * SecomdMartrix[k,j];
+                }
+                ResM[i,j] = sum;
+            }
+        }
     }
-  }
 }
 
-void WriteArray (int[,] array)
-{
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-      Console.Write(array[i,j] + " ");
-    }
-    Console.WriteLine();
-  }
-}
+
+
+Console.Write("Введите количество строк в каждой матрице: ");
+int Lines = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов в каждой матрице: ");
+int Coloms = int.Parse(Console.ReadLine());
+//if (Lines != Coloms) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
+Console.Write("Введите значение начала интервала: ");
+int beginline = int.Parse(Console.ReadLine());
+Console.Write("Введите значение окончания интервала: ");
+int endline = int.Parse(Console.ReadLine());
+
+int[,] FirstMartrix = MyArray(Lines, Coloms, beginline, endline);
+//Console.WriteLine($"\nПервая матрица:");
+PrintArray(FirstMartrix);
+
+Console.WriteLine();
+
+int[,] SecomdMartrix = MyArray(Lines, Coloms, beginline, endline);
+//Console.WriteLine($"\nВторая матрица:");
+PrintArray(SecomdMartrix);
+
+Console.WriteLine();
+
+int[,] ResM = MyArray(Lines, Coloms, beginline, endline);
+
+MultiplyMatrix(FirstMartrix, SecomdMartrix, ResM);
+//Console.WriteLine($"\nПроизведение первой и второй матриц:");
+PrintArray(ResM);
+

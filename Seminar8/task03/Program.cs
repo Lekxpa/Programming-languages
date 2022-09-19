@@ -7,23 +7,16 @@
 //18 20
 //15 18
 
-
-
-
 int[,] MyArray(int m, int n, int min, int max)
 {
     int[,] result = new int[m,n];
-    //if (m != n) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
-    //else
-    //{
-        for (int i = 0; i < m; i++)
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
         {
-            for (int j = 0; j < n; j++)
-            {
-                result[i,j] = new Random().Next(min, max + 1);
-            }
+            result[i,j] = new Random().Next(min, max + 1);
         }
-    //}
+    }
     return result;
 }
 
@@ -40,56 +33,54 @@ void PrintArray(int[,] array)
 }
 
 
-void MultiplyMatrix(int[,] FirstMartrix, int[,] SecomdMartrix, int[,] ResM)
+int[,] MultiplyMatrix(int[,] FirstArr, int[,] SecondArr)
 {
-    if (FirstMartrix != SecomdMartrix) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
-    else
+    int rows1 = FirstArr.GetLength(0);
+    int cols1 = FirstArr.GetLength(1);
+    int cols2 = SecondArr.GetLength(1);
+    int[,] res = new int[rows1, cols2];
+    for (int i = 0; i < rows1; i++)
     {
-        for (int i = 0; i < ResM.GetLength(0); i++)
+        for (int j = 0; j < cols2; j++)
         {
-            for (int j = 0; j < ResM.GetLength(1); j++)
+            for (int k = 0; k < cols1; k++)
             {
-            
-            //else
-            //{
-                int sum = 0;
-                for (int k = 0; k < FirstMartrix.GetLength(1); k++)
-                {
-                    sum += FirstMartrix[i,k] * SecomdMartrix[k,j];
-                }
-                ResM[i,j] = sum;
+                res[i,j] += FirstArr[i,k] * SecondArr[k,j];
             }
         }
     }
+    return res;
 }
 
-
-
-Console.Write("Введите количество строк в каждой матрице: ");
-int Lines = int.Parse(Console.ReadLine());
-Console.Write("Введите количество столбцов в каждой матрице: ");
-int Coloms = int.Parse(Console.ReadLine());
-//if (Lines != Coloms) Console.WriteLine("Количество строк должно совпадать с количеством столбцов. Попробуйте еще раз!");
+Console.Write("Введите количество строк первой матрицы: ");
+int Rows1 = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов первой матрицы: ");
+int Coloms1 = int.Parse(Console.ReadLine());
+Console.Write("Введите количество строк второй матрицы: ");
+int Rows2 = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов второй матрицы: ");
+int Coloms2 = int.Parse(Console.ReadLine());
 Console.Write("Введите значение начала интервала: ");
 int beginline = int.Parse(Console.ReadLine());
 Console.Write("Введите значение окончания интервала: ");
 int endline = int.Parse(Console.ReadLine());
 
-int[,] FirstMartrix = MyArray(Lines, Coloms, beginline, endline);
-//Console.WriteLine($"\nПервая матрица:");
-PrintArray(FirstMartrix);
-
-Console.WriteLine();
-
-int[,] SecomdMartrix = MyArray(Lines, Coloms, beginline, endline);
-//Console.WriteLine($"\nВторая матрица:");
-PrintArray(SecomdMartrix);
-
-Console.WriteLine();
-
-int[,] ResM = MyArray(Lines, Coloms, beginline, endline);
-
-MultiplyMatrix(FirstMartrix, SecomdMartrix, ResM);
-//Console.WriteLine($"\nПроизведение первой и второй матриц:");
-PrintArray(ResM);
-
+if (Coloms1 == Rows2)
+{
+    int[,] FirstMatrix = MyArray(Rows1, Coloms1, beginline, endline);
+    Console.WriteLine("Первая матрица:");
+    PrintArray(FirstMatrix);
+    int[,] SecomdMatrix = MyArray(Rows2, Coloms2, beginline, endline);
+    Console.WriteLine("Вторая матрица:");
+    PrintArray(SecomdMatrix);
+    int[,] ResMatrix = MultiplyMatrix(FirstMatrix, SecomdMatrix);
+    Console.WriteLine("Произведение двух матриц:");
+    PrintArray(ResMatrix);
+}
+else
+{
+    Console.WriteLine();
+    Console.WriteLine("Количество строк первой матрицы должно совпадать с количеством столбцов второй матрицы");
+    Console.WriteLine("Попробуйте еще раз!");
+    Console.WriteLine();
+}

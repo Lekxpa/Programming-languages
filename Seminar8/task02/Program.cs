@@ -23,84 +23,41 @@ int[,] MyArray(int m, int n, int min, int max)
 
 void PrintArray(int[,] array)
 {
-    for (int rows = 0; rows < array.GetLength(0); rows++)
+    for (int lines = 0; lines < array.GetLength(0); lines++)
     {
         for (int cols = 0; cols < array.GetLength(1); cols++)
         {
-            Console.Write($"{array[rows,cols]}\t ");
+            Console.Write($"{array[lines,cols]}\t ");
         }
         Console.WriteLine();
     }
 }
 
-void SumOfElemOfRow (int[,] Array)
+int SumOfElementsOfLine(int[,] array, int i)
 {
-    int minSumRow = 0;
-    int[] res = new int[Array.GetLength(0)];
-    int SumRow = 0;
-    for (int i = 0; i < Array.GetLength(0); i++)
+    int SumLine = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
     {
-    //    int res = 0;
-
-    //int temp = res;
-       // int[,] res = new int[Array.GetLength(0),Array.GetLength(1)];
-  
-
-        for (int j = 0; j < Array.GetLength(1); j++)
-        {
-        int tempSumRow = 0;
-         if (SumRow > tempSumRow)
-        {
-            SumRow = tempSumRow;
-            minSumRow = i;
-        }
-            Console.WriteLine($"\n{minSumRow+1} - строкa с наименьшей суммой ({SumRow}) элементов ");
+        SumLine += array[i,j];
     }
-    res[i] = minSumRow;
-       // {
-       //     res = res + Array[i, j];
-                 //if (temp > res) temp = res;  
-       // }
-        //Console.WriteLine();
-       // Console.WriteLine(res    );
-
-    //}
-     
-      Console.Write($"{res[i]} ");
-    }   
-    return;
+    Console.WriteLine($"Сумма элементов {i + 1}-й строки: {SumLine}");
+    return SumLine;
 }
 
-//void SumOfElemOfRow (int[,] Array)
-//{
-    //int[,] res = new int[Array.GetLength(0),Array.GetLength(1)];
-//int minSumLine = 0;
-//int sumLine = res[Array, 0];
-//for (int i = 1; i < Array.GetLength(0); i++)
-//{
- // int tempSumLine = res[Array, i];
- // if (sumLine > tempSumLine)
- // {
-  //  sumLine = tempSumLine;
-  //  minSumLine = i;
-  //}
- //Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
-//}
-
-//Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
-//}
-
-void SumLineElements(int[,] array)
+void MinOfSumOfElementsOfLine(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    int result = 0;
+    int tempsum = SumOfElementsOfLine(array, 0);
+    for (int i = 1; i < array.GetLength(0); i++)
     {
-        int SumRow = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
+        int SumLine = SumOfElementsOfLine(array, i);
+        if (tempsum > SumLine)
         {
-            SumRow += array[i,j];
+            tempsum = SumLine;
+            result = i;
         }
-        Console.WriteLine($"Сумма элементов строки: {SumRow}");
     }
+    Console.WriteLine($"Наименьшая сумма элементов в {result+1} строке");
 }
 
 Console.Write("Введите количество строк в массиве: ");
@@ -115,5 +72,4 @@ int endline = int.Parse(Console.ReadLine());
 
 int[,] MonArray = MyArray(lines, columns, beginline, endline);
 PrintArray(MonArray);
-SumLineElements(MonArray);
-SumOfElemOfRow(MonArray);
+MinOfSumOfElementsOfLine(MonArray);

@@ -47,7 +47,7 @@ void FillArray(int[,,] Array)
     int count = 0; 
     for (int i = 0; i < temp.Length; i++)
     {
-        temp[i] = new Random().Next(0, 10);
+        temp[i] = new Random().Next(0, 100);
         number = temp[i];
         if (i >= 1)
         {
@@ -55,7 +55,7 @@ void FillArray(int[,,] Array)
             {
                 while (temp[i] == temp[j])
                 {
-                    temp[i] = new Random().Next(0, 10);
+                    temp[i] = new Random().Next(0, 100);
                     j = 0;
                     number = temp[i];
                 }
@@ -76,7 +76,7 @@ void FillArray(int[,,] Array)
     }
 }
 
-Console.WriteLine("Введите размер массива: ");
+Console.WriteLine("Введите размер массива (k x m x n): ");
 Console.Write("Введите k: ");
 int k = int.Parse(Console.ReadLine());
 Console.Write("Введите m: ");
@@ -84,6 +84,6 @@ int m = int.Parse(Console.ReadLine());
 Console.Write("Введите n: ");
 int n = int.Parse(Console.ReadLine());
 
-int[,,] MonArray = MyArray(k, m, n, 0, 10);
+int[,,] MonArray = MyArray(k, m, n, 0, 100);
 PrintArray(MonArray);
 FillArray(MonArray);

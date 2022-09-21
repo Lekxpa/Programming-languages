@@ -5,9 +5,9 @@
 
 int SumOfElements(int numM, int numN)
 {
-    int result = 0;
-    if (numM > numN) return result;
-    return  result + numM + SumOfElements(++numM, numN);
+    int res = 0;
+    if (numM > numN) return res;
+    return  res + numM + SumOfElements(++numM, numN);
 }
 
 Console.Write("Введите значение - начало промежутка: ");

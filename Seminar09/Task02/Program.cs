@@ -15,6 +15,6 @@ Console.Write("Введите число n: ");
 int NumN = int.Parse(Console.ReadLine());
 
 Console.WriteLine();
-if (NumM < 0 || NumN < 0)  Console.WriteLine($"Можно использовать только положительные числа");
+if (NumM < 0 || NumN < 0)  Console.WriteLine($"Можно использовать только положительные числа. Попробуйте еще раз!");
 else Console.Write($"Функция Аккермана: {FunctionOfAkkerman(NumM, NumN)}");
-Console.WriteLine();
+Console.WriteLine();  // для красоты

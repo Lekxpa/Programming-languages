@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\bin\Debug\net6.0\Fin.exe
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\bin\Debug\net6.0\Fin.deps.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\bin\Debug\net6.0\Fin.runtimeconfig.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\bin\Debug\net6.0\Fin.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\bin\Debug\net6.0\Fin.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\refint\Fin.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\Fin.genruntimeconfig.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\Fin\obj\Debug\net6.0\ref\Fin.dll

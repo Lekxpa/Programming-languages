@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\bin\Debug\net6.0\DopLesson.exe
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\bin\Debug\net6.0\DopLesson.deps.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\bin\Debug\net6.0\DopLesson.runtimeconfig.json
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\bin\Debug\net6.0\DopLesson.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\bin\Debug\net6.0\DopLesson.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\refint\DopLesson.dll
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.pdb
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\DopLesson.genruntimeconfig.cache
+C:\Users\Asus\Desktop\GeekBrains\Языки программирования\programming languages\DopLesson\obj\Debug\net6.0\ref\DopLesson.dll
